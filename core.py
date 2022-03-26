@@ -18,6 +18,7 @@ class Manager:
         return os.path.dirname(os.path.realpath(sys.argv[0]))
     
     
+    
 if __name__ == '__main__':
     man = Manager()
     
