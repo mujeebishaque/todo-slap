@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="image_point">
+    <file>point_ico.ico</file>
+  </qresource>
+</RCC>
