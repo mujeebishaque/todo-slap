@@ -2,6 +2,8 @@
 from tinydb import TinyDB
 import os, sys
 from utils import Alerts
+
+
 class Manager:
     
     database_name = 'records.json'
