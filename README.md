@@ -1,5 +1,5 @@
 # todo-slap
-Slap me with my todos when my pc wakes up
+My personal project for myself To Slap me with my todos when my pc wakes up
 
 ### Where to download the executable of the software?
 - You can download the executable from this repo. It's placed inside the `output` folder.
@@ -21,3 +21,6 @@ Slap me with my todos when my pc wakes up
 - Pyqt5
 - TinyDB
 - Tkinter MessageBoxes
+
+### Can I copy your code to make it mine or sell it to others?
+- You're allowed to do whatever you want to do with the source code or software but `I'll request to please include my name @mujeebishaque`. Thank You :) 
