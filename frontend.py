@@ -100,8 +100,8 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
-        self.listView_2.addItems(["You son of a bitch! You haven't done jack till now. You're a fcking lazy piece of shit.", "What are you even doing in this tab?", "Like, seriously? You think I'll list your accomplishments here? You are shit, nothing else. ", "You probably did one thing and now you're pretending to be a productive person? YOU AIN'T SHIT", "Be more, Get shit done!"])
+        _abuses = ["You son of a bitch! You haven't done jack till now. You're a fcking lazy piece of shit.", "What are you even doing in this tab?", "Like, seriously? You think I'll list your accomplishments here? You are shit, nothing else. ", "You probably did one thing and now you're pretending to be a productive person? YOU AIN'T SHIT", "Be more, Get shit done!"]
+        self.listView_2.addItems(_abuses)
 
         self.manager = Manager()
         self.list_todos()
