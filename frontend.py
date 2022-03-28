@@ -123,9 +123,7 @@ class Ui_MainWindow(object):
         self.r.setText(_translate("MainWindow", "All Rights Reserved @ A. Mujeeb Ishaque"))
 
     def list_todos(self):
-        _todos = self.manager
-        
-        for item in _todos.connection.all():
+        for item in self.manager.connection.all():
             self.listView.addItem(item.get('todos'))
             
     def add_todo(self):
