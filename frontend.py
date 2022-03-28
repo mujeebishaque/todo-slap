@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-
+from core import Manager
+from utils import Alerts
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -103,6 +103,9 @@ class Ui_MainWindow(object):
 
         self.listView_2.addItems(["You son of a bitch! You haven't done jack till now. You're a fcking lazy piece of shit.", "What are you even doing in this tab?", "Like, seriously? You think I'll list your accomplishments here? You are shit, nothing else. ", "You probably did one thing and now you're pretending to be a productive person? YOU AIN'T SHIT", "Be more, Get shit done!"])
 
+        self.manager = Manager()
+        self.list_todos()
+        
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -119,15 +122,25 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tasks_done_tab), _translate("MainWindow", "Tasks Done!"))
         self.r.setText(_translate("MainWindow", "All Rights Reserved @ A. Mujeeb Ishaque"))
 
+    def list_todos(self):
+        _todos = self.manager
+        
+        for item in _todos.connection.all():
+            self.listView.addItem(item.get('todos'))
+            
     def add_todo(self):
         _text = self.add_todo_input.text()
+        if not _text or len(_text) < 5:
+            Alerts.show_alert('error', 'ERROR: Empty todo? You want to do nothing? Add a valid todo, you dumb shit.')
+            return
         self.listView.addItem(_text)
-        # also add it to the database for persistence
+        self.manager.add_record(_text)
         self.add_todo_input.setText("")
     
     def remove_todo(self):
         item_clicked = self.listView.currentRow()
-        item_clicked_index = str(item_clicked)
+        item_clicked_text = self.listView.currentItem().text()
+        self.manager.delete_record(item_clicked_text)
         self.listView.takeItem(item_clicked)
 
 import add_rc
