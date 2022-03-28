@@ -141,11 +141,7 @@ class Ui_MainWindow(object):
         self.manager.delete_record(item_clicked_text)
         self.listView.takeItem(item_clicked)
 
-import add_rc
-import minus_rc
-import point_ico_rc
-import slap_pixmap_rc
-import yes_rc
+import add_rc, minus_rc, point_ico_rc, slap_pixmap_rc, yes_rc
 
 
 if __name__ == "__main__":
