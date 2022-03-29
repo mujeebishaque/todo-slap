@@ -22,5 +22,8 @@ My personal project for myself To Slap me with my todos when my pc wakes up
 - TinyDB
 - Tkinter MessageBoxes
 
+### Database of choice?
+- I used tinyDB which uses .json file as a database. It's efficient and very easy to use.
+
 ### Can I copy your code to make it mine or sell it to others?
 - You're allowed to do whatever you want to do with the source code or software but `I'll request to please include my name @mujeebishaque`. Thank You :) 
